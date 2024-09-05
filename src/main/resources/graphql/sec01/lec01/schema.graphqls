@@ -1,0 +1,8 @@
+type Query{
+    #sayHello라는 이름의 쿼리를 정의, controller에서 sayHello라는 함수를 호출 , 메서드 명이 같거나 @QueryMapping에 정의된 이름과 일치해야함
+    sayHello: String
+    #:String :  타입으로 반환, 그리고 PathVariable 처럼 Argument를 써서 name를 받을 수 있음
+    #!를 붙이면 필수값이라는 뜻 null이면 안됨
+    sayHelloTo(name: String!): String
+    random: Int!
+}

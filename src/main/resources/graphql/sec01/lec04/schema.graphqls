@@ -1,0 +1,51 @@
+type Query{
+    customers: [Customer]!
+}
+
+
+
+
+#type Customer{
+#    id: ID!
+#    name: String
+#    age: Int
+#    city: String
+#    orders: [CustomerOrder]!
+#}
+#
+#type CustomerOrder{
+#    id: ID!
+#    description: String
+#}
+#
+#query CustomerById($id: ID! = 1){
+#    customerById(id: $id){
+#        ... CustomerDetails
+#    }
+#}
+#query CustomersByAgeRange(
+#    $kids: AgeRangeFilter!,
+#    $audlts: AgeRangeFilter!,
+#    $seniors: AgeRangeFilter!,
+#    $includeKids: Boolean!= false,
+#    $includeAdults: Boolean!= false,
+#    $includeSeniors: Boolean!= false
+#){
+#    kids: customersByAgeRange(filter: $kids)  @include(if: $includeKids){
+#        ... CustomerDetails
+#    }
+#    adults:customersByAgeRange(filter: $audlts) @include(if: $includeAdults){
+#        ... CustomerDetails
+#    }
+#    seniors: customersByAgeRange(filter: $seniors) @include(if: $includeSeniors){
+#        ... CustomerDetails
+#    }
+#}
+#
+#
+#fragment CustomerDetails on Customer{
+#    id
+#    name
+#    age
+#    city
+#}

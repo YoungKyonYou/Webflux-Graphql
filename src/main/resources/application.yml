@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: graphql-playground
+  graphql:
+    schema:
+      locations: classpath:graphql/sec01/lec02
+    graphql:
+      path: /graphql
+    graphiql:
+      enabled: true
+      path: /graphiql
+
+
