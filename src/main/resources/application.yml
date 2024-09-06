@@ -3,7 +3,7 @@ spring:
     name: graphql-playground
   graphql:
     schema:
-      locations: classpath:graphql/sec01/lec02
+      locations: classpath:graphql/lec12
     graphql:
       path: /graphql
     graphiql:
